@@ -71,12 +71,13 @@ void coord_2d_midpoint(coord_2d_t* mid, const coord_2d_t* a, const coord_2d_t* b
 }
 
 double coord_2d_area_triangle(const coord_2d_t* a, const coord_2d_t* b, const coord_2d_t* c){
-	double area;
-	double one, two three;
-	one = (a->x)*((b->y) - (c->y));
-	two = (b->x)*((c->y)-(a->y));
-	three = (c->x)*((a->y)-(b->y));
-	area = abs(one + two + three)/2;
-	return area;
+//	double area;
+//	double one, two, three;
+//	one = a->x*(b->y - c->y);
+//	two = b->x*(c->y-a->y);
+//	three = c->x*(a->y-b->y);
+//	area = abs((one + two + three)/2);
+//  	printf("Area = %f", area);
+	return abs((a->x*(b->y - c->y)+ b->x*(c->y-a->y) + c->x*(a->y-b->y))/2);
 }
 
